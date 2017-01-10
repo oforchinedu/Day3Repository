@@ -26,6 +26,9 @@ describe("Find missing number two lists: ", function() {
       expect(findMissing([7], [7])).toEqual(0);
     });
 
+    it("should return 0 for [10],[10]", function() {
+      expect(findMissing([10], [10])).toEqual(0);
+    });
 
   });
 
@@ -43,6 +46,13 @@ describe("Find missing number two lists: ", function() {
       expect(findMissing([5, 4, 7, 6, 11, 66], [5, 4, 1, 7, 6, 11, 66])).toEqual(1);
     });
 
+    it("should return 18 for [1, 2, 3, 5], [18,3,5,2,1]", function() {
+      expect(findMissing([1, 2, 3, 5], [18,3,5,2,1])).toEqual(18);
+    });
+
+    it("should return 50 for [3, 5, 7, 13], [3, 5, 7, 13, 50]", function() {
+      expect(findMissing([3, 5, 7, 13], [3, 5, 7, 13, 50])).toEqual(50);
+    });
 
   });
 
