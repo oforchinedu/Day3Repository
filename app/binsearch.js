@@ -48,6 +48,7 @@ Array.prototype.search = function(number){
     last = mid -1;
       
     }
+    
     output.count ++;
   }
   return output;
