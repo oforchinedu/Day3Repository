@@ -20,11 +20,11 @@ Array.prototype.toOneThousand = function(){
 };
 
 Array.prototype.search = function(number){
-  first =0;
+  first = 0;
   last = this.length-1;
-  var n = this.length;
-  var output = {count:0, index:-1, length:n};
-  
+  var len = this.length;
+  var output = {count:0, index:-1, length:len};
+
   while(first<=last){
     var mid = Math.floor((first+last)/2);
     if(this[first]==number){
@@ -44,8 +44,9 @@ Array.prototype.search = function(number){
       last -=1;
     }
     else{
-      last = mid -1;
-      first +=1;
+    first +=1;
+    last = mid -1;
+      
     }
     output.count ++;
   }
